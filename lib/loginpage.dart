@@ -35,6 +35,9 @@ TextEditingController emailController =TextEditingController();
       setState(() => _isLoading = true);
       await Future.delayed(const Duration(seconds: 2));
       setState(() => _isLoading = false);
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Login Berhasil!')),
+      );
 
       Navigator.pushReplacement(
         context,
